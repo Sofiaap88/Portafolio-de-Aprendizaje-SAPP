@@ -1,12 +1,12 @@
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  background: #f8f9fa;
+  background: #ADD8E6;
   color: #333;
 }
 
 header {
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background: linear-gradient(135deg, #3e5f8a, #3e5f8a);
   color: white;
   text-align: center;
   padding: 1.5rem 0;
@@ -36,7 +36,7 @@ nav a.activo {
 .hero {
   text-align: center;
   padding: 4rem 1rem;
-  background: #eef2ff;
+  background: #ADD8E6;
   animation: fadeIn 2s ease;
 }
 
@@ -51,7 +51,7 @@ nav a.activo {
 }
 
 .btn:hover {
-  background: #6a11cb;
+  background: #3e5f8a;
 }
 
 .galeria {
@@ -109,11 +109,11 @@ button {
 }
 
 button:hover {
-  background: #6a11cb;
+  background: #3e5f8a;
 }
 
 footer {
-  background: #222;
+  background: hsl(206, 81%, 45%);
   color: white;
   text-align: center;
   padding: 1rem 0;
