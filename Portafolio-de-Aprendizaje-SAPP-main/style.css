@@ -1,0 +1,126 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #ADD8E6;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, #3e5f8a, #3e5f8a);
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.activo {
+  text-decoration: underline;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #ADD8E6;
+  animation: fadeIn 2s ease;
+}
+
+.btn {
+  display: inline-block;
+  background: #2575fc;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #3e5f8a;
+}
+
+.galeria {
+  padding: 2rem;
+  text-align: center;
+}
+
+.imagenes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.imagenes img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s;
+}
+
+.imagenes img:hover {
+  transform: scale(1.05);
+}
+
+.contenido {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+input, textarea {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  background: #2575fc;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #3e5f8a;
+}
+
+footer {
+  background: hsl(206, 81%, 45%);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
