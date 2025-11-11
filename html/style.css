@@ -39,6 +39,129 @@ nav a.activo {
   background: #ADD8E6;
   animation: fadeIn 2s ease;
 }
+.hero-izquierda {
+  min-height: 60vh;              /* altura para centrar verticalmente */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;       /* centra verticalmente el contenido */
+  align-items: flex-start;       /* alinea a la izquierda */
+  text-align: left;
+  padding: 4rem 2rem;
+  margin: 0;
+  position: relative;
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column; /* móvil: imagen debajo */
+  gap: 1.25rem;
+  width: 100%;
+  align-items: stretch;
+}
+
+.hero-text {
+  /* mantiene el texto en su lugar a la izquierda */
+  text-align: left;
+  flex: 1;
+}
+
+.hero-media {
+  position: absolute;
+  top: 220px;
+  right: 30px;
+}
+
+@media (min-width: 900px) {
+  .hero-media {
+    top: 280px;
+    right: 60px;
+  }
+
+  .imagen-proyecto {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+  }
+}
+
+/* útil para centrar horizontalmente el bloque en pantallas grandes */
+@media (min-width: 900px) {
+  .hero-izquierda {
+    margin-left: 3rem;
+  }
+}
+.hero-inner {
+  display: flex;
+  flex-direction: column; /* móvil: imagen debajo */
+  gap: 1.25rem;
+  width: 100%;
+  align-items: stretch;
+}
+
+.hero-text {
+  /* mantiene el texto en su lugar a la izquierda */
+  text-align: left;
+  flex: 1;
+}
+
+.hero-media {
+  position: absolute;
+  top: 220px;
+  right: 30px;
+}
+
+.imagen-proyecto {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.imagen-proyecto:hover {
+  transform: scale(1.10);
+}
+
+/* imagen pequeña */
+.imagen-pequeña {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 0.5rem;
+  transition: transform 0.4s;
+}
+
+.imagen-pequeña:hover {
+  transform: scale(1.05);
+}
+
+/* en pantallas grandes: texto a la izquierda, imagen a la DERECHA */
+@media (min-width: 900px) {
+  .hero-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .hero-text {
+    flex: 1;
+    max-width: 65%;
+  }
+
+  .hero-media {
+    width: 30%;
+    justify-content: flex-end; /* imagen a la DERECHA */
+  }
+
+  .imagen-proyecto {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+  }
+}
 
 .btn {
   display: inline-block;
@@ -73,17 +196,6 @@ nav a.activo {
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.4s;
-}
-.imagen-proyecto {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.4s;
-}
-
-.imagen-proyecto:hover {
-  transform: scale(1.05);
 }
 
 .imagenes img:hover {
