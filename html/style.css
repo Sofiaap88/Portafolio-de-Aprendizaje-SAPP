@@ -78,8 +78,8 @@ nav a.activo {
   }
 
   .imagen-proyecto {
-    width: 150px;
-    height: 150px;
+    width: 350px;
+    height: 350px;
     flex-shrink: 0;
   }
 }
@@ -111,22 +111,25 @@ nav a.activo {
 }
 
 .imagen-proyecto {
-  width: 120px;
-  height: 120px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   border-radius: 12px;
   transition: transform 0.4s;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.imagen-proyecto:hover {
-  transform: scale(1.10);
+@media (min-width: 900px) {
+  .imagen-proyecto {
+    width: 320px;
+    height: 320px;
+  }
 }
 
 /* imagen pequeña */
 .imagen-pequeña {
-  width: 200px;
-  height: 150px;
+  width: 300px;
+  height: 250px;
   object-fit: cover;
   border-radius: 10px;
   margin: 0.5rem;
@@ -165,7 +168,7 @@ nav a.activo {
 
 .btn {
   display: inline-block;
-  background: #2575fc;
+  background: #3e5f8a;
   color: white;
   padding: 0.7rem 1.5rem;
   border-radius: 25px;
@@ -223,7 +226,7 @@ input, textarea {
 }
 
 button {
-  background: #2575fc;
+  background: #3e5f8a;
   color: white;
   border: none;
   padding: 0.8rem;
@@ -237,26 +240,73 @@ button:hover {
 }
 
 footer {
-  background: hsl(206, 81%, 45%);
+  background: #3e5f8a;
   color: white;
   text-align: center;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   margin-top: 2rem;
+}
+
+.footer-redes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.footer-icon:hover {
+  transform: scale(1.15);
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.social-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.10);
+}
+/* íconos redes sociales y footer: reducir a 30px */
+.social-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.3s;
+}
+
+.footer-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.3s;
+}
+
+.social-icon:hover,
+.footer-icon:hover {
+  transform: scale(1.15);
 }
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-.social-icon {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  transition: transform 0.3s;
-  margin: 1rem 0.5rem;
-}
-
-.social-icon:hover {
-  transform: scale(1.15);
 }
